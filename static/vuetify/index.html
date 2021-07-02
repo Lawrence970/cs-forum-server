@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-toolbar>
+            <v-toolbar-title>Newspaper</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+                <v-btn text>News</v-btn>  
+                <v-btn text>About Us</v-btn>
+                <v-divider inset vertical></v-divider>
+                <v-btn text>Sign Up</v-btn>     
+            </v-toolbar-items>
+        </v-toolbar>
+        
+        <v-container grid-list-lg>
+            <v-layout row>
+                <v-flex xs2>
+                    <v-card loading>
+                        <v-card-text class="purple darken-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,                         </v-card-text>
+                    </v-card>
+                </v-flex>
+                <v-flex xs7>
+                    <v-card>
+                        <v-card-title class="display-1">Article Title</v-card-title>
+                        <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </v-card-text>
+                    </v-card>
+                </v-flex>
+                <v-flex xs3>
+                    <v-layout column>
+                        <v-flex>
+                            <v-card elevation="24"> 
+                                <v-card-text>
+                                    This here
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                        <v-flex elevation="18">
+                            <v-card> 
+                                <v-card-text>
+                                    This here
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                        <v-flex>
+                            <v-card elevation="24"> 
+                                <v-card-text>
+                                    This here
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+
+                    </v-layout>
+
+
+
+                </v-flex>
+
+            </v-layout>
+
+
+
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
