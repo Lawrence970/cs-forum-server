@@ -2,6 +2,10 @@
 const mongoose = require("mongoose")
 
 const threadSchema = mongoose.Schema({ // this is a schema. it contains all datatypes
+    name: String, //headline
+    author: String,
+    description: String,
+    category: String,
     
 });
 

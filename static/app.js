@@ -1,5 +1,3 @@
-const server_url="https://cs-forum-21.herokuapp.com/"
-
 var app= new Vue({
     el:"#app",
     data:{
@@ -32,6 +30,8 @@ var app= new Vue({
         //for a new post
         new_post_author:"",
         new_post_body:"",
+
+        server_url:"http://forum2021.codeschool.cloud",
 
         threads:[]
     },
