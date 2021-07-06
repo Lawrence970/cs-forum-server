@@ -31,7 +31,7 @@ var app= new Vue({
         new_post_author:"",
         new_post_body:"",
 
-        server_url:"http://forum2021.codeschool.cloud",
+        server_url:"https://cs-forum-21.herokuapp.com",
 
         threads:[]
     },
@@ -110,7 +110,7 @@ var app= new Vue({
             var new_post={
                 thread_id: thread_id,
                 author: this.new_post_author,
-                body: this. new_post_body
+                body: this.new_post_body
             }
 
             fetch(this.server_url+"/post",{

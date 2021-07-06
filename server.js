@@ -7,13 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json({}));
 
+app.use(express.static("static"))
+
 
 // GET /thread
 app.get("/thread",(req,res)=>{
     res.setHeader("Content-Type","application/json");
     console.log("getting all threads")
-
-    console.log("hello")
 
     Thread.find(function(err,threads){
         if(err){
@@ -30,14 +30,35 @@ app.get("/thread",(req,res)=>{
 });
 
 // GET /thread/:id
+app.get("/thread/:id",(req,res)=>{
+    res.setHeader("Content-Type","application/json");
+    console.log(`getting a thread by id ${req.params.id}`)
+
+});
 
 // POST /thread
+app.post("/thread",(req,res)=>{
+    res.setHeader("Content-Type","application/json");
+    console.log("posting a new thread")
+});
+
+// POST /post;
+app.post("/post",(req,res)=>{
+    res.setHeader("Content-Type","application/json");
+    console.log("posting a new post")
+});
 
 // DELETE /thread/:id
-
-// POST /post
+app.delete("/thread/:id",(req,res)=>{
+    res.setHeader("Content-Type","application/json");
+    console.log(`deleting a thread by id ${req.params.id}`)
+});
 
 // DELETE /post/:thread_id/:post_id
+app.delete("/thread/:thread_id/:post_id",(req,res)=>{
+    res.setHeader("Content-Type","application/json");
+    console.log(`deleting post in thread by id ${req.params.post_id}`)
+});
 
 
 module.exports = app;
